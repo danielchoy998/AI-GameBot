@@ -23,7 +23,7 @@ This file provides a brief overview of some standalone or testing scripts within
 **Purpose:** This script functions as a text-only command-line chatbot interface that interacts with a locally running Ollama LLM.
 
 **Key Features:**
-*   Currently hardcoded to use the `gemma3:4b` Ollama model.
+*   Local LLM deployment with Ollama. (Model -> gemma3:4b)
 *   Connects to a local Ollama instance using the `ollama` Python library.
 *   Maintains a `conversation_history` list to provide context to the LLM.
 *   Handles user input in a loop.
