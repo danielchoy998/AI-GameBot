@@ -7,7 +7,7 @@ import traceback
 import logging
 log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)  
-from LLMmodel import LLMConnector
+from Model.LLMmodel import LLMConnector
 
 # Initialize Flask app
 app = Flask(__name__, static_folder='static', template_folder='templates')
