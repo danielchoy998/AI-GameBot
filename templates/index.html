@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI GameBot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Add custom scrollbar styling if desired */
+        #chat-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        #chat-container::-webkit-scrollbar-thumb {
+            background-color: #a0aec0; /* gray-500 */
+            border-radius: 4px;
+        }
+        #chat-container::-webkit-scrollbar-track {
+            background-color: #edf2f7; /* gray-200 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-white shadow-md p-3 flex justify-between items-center border-b border-gray-300">
+        <!-- Mode Selection (Placeholder) -->
+        <div class="relative">
+            <select class="appearance-none bg-gray-200 border border-gray-300 text-gray-700 py-1 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-sm">
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+        </div>
+
+        <!-- Page Name -->
+        <h1 class="font-semibold text-lg text-gray-800">AI GameBot</h1>
+
+        <!-- User Name (Placeholder) -->
+        <div class="text-sm text-gray-600">
+            User Name
+        </div>
+    </div>
+
+    <!-- Chat Interface -->
+    <div id="chat-container" class="flex-grow p-4 overflow-y-auto space-y-4">
+
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bg-white shadow-inner p-3 flex items-center border-t border-gray-300">
+        <!-- AI NPC Name Selector -->
+        <div class="flex items-center mr-4">
+            <label for="npc-select" class="text-sm font-medium text-gray-700 mr-2 whitespace-nowrap">AI NPC:</label>
+            <select id="npc-select" name="npc" class="appearance-none bg-gray-200 border border-gray-300 text-gray-700 py-1 px-3 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-sm">
+                <option>Sayonana</option>
+            </select>
+             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700" style="position: relative; right: 28px;"> <!-- Relative positioning for icon -->
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="flex-grow flex items-center">
+            <input type="text" id="user-input" placeholder="Type your message..." class="flex-grow border border-gray-300 rounded-l-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <button id="send-button" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold p-2 rounded-r-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1">
+                Send
+            </button>
+        </div>
+    </div>
+
+    <!-- Link the JavaScript file -->
+    <script src="/static/app.js"></script>
+</body>
+</html> 
